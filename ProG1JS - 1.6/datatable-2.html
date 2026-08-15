@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/datatable-2.css">
+    <script src="js/datatable-2.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <video autoplay muted loop id="video-bg"><source src="video/Loop.mp4" type="video/mp4"></video>
+    <header>
+        <img src="image/image_logoJS.png" id="logo" alt="logo">
+        <h2>Projet en DHTML</h2>
+    </header>
+    <h2 id="titre">Table des données</h2>
+    
+    <nav class="link">
+        <h5>Navigation</h5>
+        <ul>
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="cramer.html">Cramer</a></li>
+            <li><a href="couche-2.html">Redimension</a></li>
+            <li><a href="panneau.html">Panneau</a></li>
+            <li><a href="datatable-2.html">Datatable</a></li>
+        </ul>
+    </nav>
+
+    <div id="contenu">
+        <h6>Données des produits</h6>
+        <table>
+            <thead>
+                <tr>
+                    <th>Designation</th>
+                    <th>Quantité</th>
+                    <th>Prix(Ar)</th>
+                    <th>Montant</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" class="designation-input" value="Riz"></td>
+                    <td><input type="number" class="quantite-input" value="10"></td>
+                    <td><input type="number" class="prix-input" value="4000"></td>
+                    <td><input type="text" name="riz" readonly></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="designation-input" value="Manioc"></td>
+                    <td><input type="number" class="quantite-input" value="20"></td>
+                    <td><input type="number" class="prix-input" value="3000"></td>
+                    <td><input type="text" name="manioc" readonly></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="designation-input" value="Sucre"></td>
+                    <td><input type="number" class="quantite-input" value="50"></td>
+                    <td><input type="number" class="prix-input" value="1000"></td>
+                    <td><input type="text" name="sucre" readonly></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="designation-input" value="Patate"></td>
+                    <td><input type="number" class="quantite-input" value="40"></td>
+                    <td><input type="number" class="prix-input" value="500"></td>
+                    <td><input type="text" name="patate" readonly></td>
+                </tr>
+                <tr>
+                    <td>TOTAL</td>
+                    <td><input type="text" name="totalQuantite" readonly></td>
+                    <td><input type="text" name="totalPrix" readonly></td>
+                    <td><input type="text" name="totalMontant" readonly></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Statistiques sur les prix calculés -->
+        <div id="ligne-stats">
+            <div class="stat-box">
+                <label for="minimal-input">Prix minimal (Ar)</label>
+                <input type="text" id="minimal-input" readonly placeholder="-">
+            </div>
+            <div class="stat-box">
+                <label for="moyen-input">Prix moyen (Ar)</label>
+                <input type="text" id="moyen-input" readonly placeholder="-">
+            </div>
+            <div class="stat-box">
+                <label for="maximal-input">Prix maximal (Ar)</label>
+                <input type="text" id="maximal-input" readonly placeholder="-">
+            </div>
+        </div>
+    </div>
+
+    <!--Graphe-->
+    <div id="graphe">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <footer>
+        <p id="auteur">Auteurs: Groupe# L1 PRO-G1</p>
+        <p id="pied">Merci beaucoup pour votre attention</p>
+    </footer>
+</body>
+</html>

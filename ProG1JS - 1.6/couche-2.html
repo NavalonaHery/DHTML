@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/couche-2.css">
+    <script src="js/couche-2.js" defer></script>
+</head>
+<body>
+    <video autoplay muted loop id="video-bg"><source src="video/Loop.mp4" type="video/mp4"></video>
+     <header>
+            <!--en-tête de la page web-->
+            <img src="image/image_logoJS.png" id="logo" alt="image du logo">
+            <h2>Projet en DHTML</h2>
+        </header>
+        <h3 id="titre">Redimensionner une image</h3>
+         <nav class="link">
+                <!--les navigations-->
+                <h5>Navigation</h5>
+                <ul>
+                    <li><a href="index.html"><span></span>Acceuil</a></li>
+                    <li><a href="cramer.html"><span></span>Cramer</a></li>
+                    <li><a href="couche-2.html"><span></span>Redimension</a></li>
+                    <li><a href="panneau.html"><span></span>Panneau</a></li>
+                    <li><a href="datatable-2.html"><span></span>Datatable</a></li>
+                </ul>
+            </nav>
+        <!--le corps de la page-->
+     <div class="affichage"> 
+    <div id="carte">
+        <div id="titre_carte">
+            
+        </div>
+
+        <div id="contenu">
+            <div id="redimention">
+                <div class="champ-slider">
+                    <label for="largeur">Largeur</label>
+                    <input type="range" id="largeur" name="largeur" min="100" max="800" value="400">
+                    <div class="valeur-px">
+                        <input type="number" id="largeurNumber" name="largeurNumber" min="100" max="800" value="400">
+                        <span>px</span>
+                    </div>
+                </div>
+
+                <div class="champ-slider">
+                    <label for="hauteur">Hauteur</label>
+                    <input type="range" id="hauteur" name="hauteur" min="100" max="800" value="250">
+                    <div class="valeur-px">
+                        <input type="number" id="hauteurNumber" name="hauteurNumber" min="100" max="800" value="250">
+                        <span>px</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="apercu">
+                <span>COUCHE</span>
+            </div>
+            <img src="image/ranomafana.jpg" id="lelogo" alt="logo">
+        </div>
+    </div></div>
+    
+    <footer>
+        <p>Merci beaucoup pour votre attention!</p>
+        <p>Auteurs: Groupe# L1 PRO-G1</p>
+    </footer>
+    
+</body>
+</html>

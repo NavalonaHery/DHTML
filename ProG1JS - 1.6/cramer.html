@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta lang="fr">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <link rel="stylesheet" href="css/cramer.css">
+        <script src="js/cramer.js" defer></script>
+        <title>Projet DHTML(Cramer)</title>
+    </head>
+    <body>
+        <video autoplay muted loop id="video-bg"><source src="video/Loop.mp4" type="video/mp4"></video>
+        <header>
+            <img src="image/image_logoJS.png" id="logo" alt="logo">
+            <h2>Projet en DHTML</h2>
+        </header>
+        <h2 id="titre">Méthode de Cramer.</h2>
+        <p class="texte">La régle de Cramer est une formule mathématique en algèbre linéaire qui permet de résoudre un système d'équations linéaires carré(autant d'équations que d'inconnues) en calculant des rapports de déterminants, à condition que le déterminant principal soit nul.</p>
+        <h2 id="grand">Résolution par CRAMER</h2>
+        <main>
+            <nav class="link">
+                 <!--les navigations-->
+                <h5>Navigation</h5>
+                <ul>
+                    <li><a href="index.html"><span></span>Acceuil</a></li>
+                    <li><a href="cramer.html"><span></span>Cramer</a></li>
+                    <li><a href="couche-2.html"><span></span>Redimension</a></li>
+                    <li><a href="panneau.html"><span></span>Panneau</a></li>
+                    <li><a href="datatable-2.html"><span></span>Datatable</a></li>
+                </ul>
+            </nav>
+             <!--zone d'affichage-->
+             <form id="matrice">
+                <div class="matrix">
+                    <input type="text" placeholder="A11">+
+                    <input type="text" placeholder="A12">+
+                    <input type="text" placeholder="A13">=
+                    <input type="text" placeholder="B1">
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="A21">+
+                    <input type="text" placeholder="A22">+
+                    <input type="text" placeholder="A23">=
+                    <input type="text" placeholder="B2">
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="A31">+
+                    <input type="text" placeholder="A32">+
+                    <input type="text" placeholder="A33">=
+                    <input type="text" placeholder="B3">
+                </div>
+                <button type="submit" id="btn">Résoudre</button>
+
+                <div id="resultat">
+                    <label>X1=<input type="text"></label>
+                    <label>X2=<input type="text"></label>
+                    <label>X3=<input type="text"></label>
+                </div>
+             </form>
+             
+        </main>
+    </body>
+     <footer>
+        <p id="auteur">Auteurs:Groupe# L1 PRO-G1</p>
+        <p id="pied">Merci beaucoup pour votre attention</p>
+    </footer>
+</html>

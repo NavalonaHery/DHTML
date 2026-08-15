@@ -1,0 +1,198 @@
+/* VARIABLES & DESIGN SYSTEM (Thème Noir-Orange) */
+:root {
+    --bg-dark: #0f0f10;
+    --bg-card: rgba(20, 20, 22, 0.85);
+    --primary-orange: #ff6b00;
+    --primary-hover: #e05d00;
+    --accent-orange: #ff9100;
+    --text-main: #f4f4f6;
+    --text-muted: #a0a0a8;
+    --border-color: rgba(255, 107, 0, 0.25);
+    --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --nav-width: 200px;
+    --header-height: 60px;
+}
+
+/* BASE & LAYOUT */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.4);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    background: rgba(10, 10, 10, 0.95);
+    border-bottom: 2px solid var(--primary-orange);
+    z-index: 200;
+}
+
+header h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+#logo {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    clip-path: polygon(10% 0%, 90% 0%, 90% 55%, 75% 75%, 50% 100%, 25% 75%, 10% 55%);
+}
+
+#titre {
+    text-align: center;
+    color: var(--primary-orange);
+    font-size: 1.8rem;
+    margin: 20px 0;
+    text-transform: uppercase;
+    margin-top: 05%;
+    margin-bottom: 0%;
+    margin-left: 12%;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    /* margin-top: var(--header-height); */
+    margin-top: 0px;
+    margin-bottom: 50px;
+    padding: 20px;
+    gap: 20px;
+    margin-left: 14%;
+}
+
+/* NAVIGATION */
+nav.link {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: var(--nav-width);
+    height: calc(100vh - var(--header-height) - 40px);
+    background: rgba(15, 15, 18, 0.9);
+    border-right: 1px solid var(--border-color);
+    padding: 20px;
+    z-index: 100;
+}
+
+nav h5 {
+    color: var(--primary-orange);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 8px;
+}
+
+nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 10px 12px;
+    display: block;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--primary-orange);
+    color: #000;
+    font-weight: bold;
+    padding-left: 18px;
+}
+nav li a[href="index.html"] {
+  background: var(--primary-orange);
+  color: #000;
+  font-weight: bold;
+}
+
+/* AFFICHAGE DE L'ACCUEIL */
+.affichage {
+    flex: 1;
+    padding: 20px;
+    background: var(--bg-card);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Force 2 colonnes égales sur écran normal */
+    gap: 20px;
+    margin-top: 15px;
+}
+
+/*repasser sur 1 colonne sur les écrans mobiles pour éviter l'écrasement */
+@media (max-width: 600px) {
+    .images {
+        grid-template-columns: 1fr;
+    }
+}
+
+.images img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+/* FOOTER */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(10, 10, 10, 0.95);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    z-index: 100;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+#auteur, #pied {
+    margin: 0;
+    color: var(--text-muted);
+}
